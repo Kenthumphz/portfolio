@@ -98,12 +98,12 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-background via-background to-muted/20">
       {/* Hero Section */}
-      <section className="relative overflow-hidden px-6 pt-20 pb-16 md:pt-32 md:pb-24">
+      <section className="relative overflow-hidden px-6 pt-24 pb-20 md:pt-40 md:pb-32">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10 pointer-events-none" />
         <div className="container mx-auto max-w-6xl relative">
-          <div className="text-center space-y-6 animate-fade-in">
-              <div className="mx-auto w-32 h-32 rounded-full overflow-hidden shadow-glow">
-              <img src="/portfolio/Kent.jpeg" alt="Emmanuel Humphrey" className="object-cover w-full h-full" />
+          <div className="text-center space-y-8 animate-fade-in">
+              <div className="mx-auto w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden shadow-glow">
+              <img src="/portfolio/Kent.jpeg" alt="Emmanuel Humphrey" className="object-cover w-full h-full scale-110" style={{objectPosition: 'center 20%'}} />
               </div>
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-scale-in">
                 Emmanuel Humphrey
