@@ -20,3 +20,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./out
           publish_branch: gh-pages
+            # Note: Only one publish_branch should be present. This line triggers a commit for workflow update.
