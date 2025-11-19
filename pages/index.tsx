@@ -193,7 +193,7 @@ const Index = () => {
                 <CardDescription className="text-lg">Universität Siegen</CardDescription>
               </CardHeader>
               <CardContent>
-                <Badge variant="outline">2020 - 2022</Badge>
+                <Badge variant="outline">2018 - 2021</Badge>
               </CardContent>
             </Card>
             <Card className="border-primary/20 hover:border-primary/40 transition-all hover:shadow-glow">
@@ -202,7 +202,7 @@ const Index = () => {
                 <CardDescription className="text-lg">University of Port-Harcourt</CardDescription>
               </CardHeader>
               <CardContent>
-                <Badge variant="outline">2013 - 2017</Badge>
+                <Badge variant="outline">2011 - 2015</Badge>
               </CardContent>
             </Card>
           </div>
