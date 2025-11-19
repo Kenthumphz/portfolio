@@ -112,8 +112,14 @@ const Index = () => {
               Data Analyst | Business Intelligence Expert | Cloud Solutions Architect
             </p>
             <div className="flex flex-wrap gap-4 justify-center pt-4">
-              <a href="mailto:Humphreyemmanuel29@gmail.com">
+              <a href="#projects">
                 <Button size="lg" className="gap-2 shadow-lg hover:shadow-glow transition-all">
+                  <Briefcase className="h-5 w-5" />
+                  View Projects
+                </Button>
+              </a>
+              <a href="mailto:Humphreyemmanuel29@gmail.com">
+                <Button size="lg" variant="outline" className="gap-2">
                   <Mail className="h-5 w-5" />
                   Get In Touch
                 </Button>
@@ -232,7 +238,7 @@ const Index = () => {
       </section>
 
       {/* Projects Section */}
-      <section className="px-6 py-16 md:py-24">
+      <section id="projects" className="px-6 py-16 md:py-24">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-4xl font-bold mb-12">Notable Projects</h2>
           <div className="space-y-6">
