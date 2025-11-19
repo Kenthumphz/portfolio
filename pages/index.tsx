@@ -112,14 +112,18 @@ const Index = () => {
               Data Analyst | Business Intelligence Expert | Cloud Solutions Architect
             </p>
             <div className="flex flex-wrap gap-4 justify-center pt-4">
-              <Button size="lg" className="gap-2 shadow-lg hover:shadow-glow transition-all">
-                <Mail className="h-5 w-5" />
-                Get In Touch
-              </Button>
-              <Button size="lg" variant="outline" className="gap-2">
-                <Linkedin className="h-5 w-5" />
-                View LinkedIn
-              </Button>
+              <a href="mailto:Humphreyemmanuel29@gmail.com">
+                <Button size="lg" className="gap-2 shadow-lg hover:shadow-glow transition-all">
+                  <Mail className="h-5 w-5" />
+                  Get In Touch
+                </Button>
+              </a>
+              <a href="https://www.linkedin.com/in/emmanuel-humphrey/" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" variant="outline" className="gap-2">
+                  <Linkedin className="h-5 w-5" />
+                  View LinkedIn
+                </Button>
+              </a>
             </div>
           </div>
         </div>
