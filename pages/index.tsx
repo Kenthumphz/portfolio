@@ -103,7 +103,7 @@ const Index = () => {
         <div className="container mx-auto max-w-6xl relative">
           <div className="text-center space-y-8 animate-fade-in">
               <div className="mx-auto w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden shadow-glow">
-              <img src="/portfolio/Kent.jpeg" alt="Emmanuel Humphrey" className="object-cover w-full h-full scale-110" style={{objectPosition: 'center 20%'}} />
+              <img src="/portfolio/Kent.jpeg" alt="Emmanuel Humphrey" className="object-cover w-full h-full scale-125" style={{objectPosition: 'center 35%'}} />
               </div>
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-scale-in">
                 Emmanuel Humphrey
