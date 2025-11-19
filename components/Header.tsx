@@ -1,11 +1,10 @@
 import Link from 'next/link'
-import Image from 'next/image'
 
 export default function Header() {
   return (
     <header className="max-w-6xl mx-auto p-6 flex items-center justify-between">
       <Link href="/" className="flex items-center gap-3">
-        <Image src="/Kent.jpeg" alt="Emmanuel" width={40} height={40} className="rounded-full object-cover" />
+        <img src="/portfolio/Kent.jpeg" alt="Emmanuel" width="40" height="40" className="rounded-full object-cover" />
         <span className="text-lg font-semibold text-foreground">Emmanuel H.</span>
       </Link>
       <nav className="space-x-6 text-muted-foreground">

@@ -1,5 +1,4 @@
 import React from 'react'
-import Image from 'next/image'
 import { Button } from '../components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card'
 import { Badge } from '../components/ui/badge'
@@ -104,7 +103,7 @@ const Index = () => {
         <div className="container mx-auto max-w-6xl relative">
           <div className="text-center space-y-6 animate-fade-in">
               <div className="mx-auto w-32 h-32 rounded-full overflow-hidden shadow-glow">
-              <Image src="/Kent.jpeg" alt="Emmanuel Humphrey" width={128} height={128} className="object-cover w-full h-full" />
+              <img src="/portfolio/Kent.jpeg" alt="Emmanuel Humphrey" className="object-cover w-full h-full" />
               </div>
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-scale-in">
                 Emmanuel Humphrey
