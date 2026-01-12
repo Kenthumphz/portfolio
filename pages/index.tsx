@@ -54,13 +54,13 @@ const Index = () => {
       title: "Spotify Music",
       description: "Led development and management of Ford's €15M program dashboard for chargeback tracking, yielding millions in quarterly cost savings",
       highlight: true,
-      link: "/docs/spotify-music-powerbi.md"
+      link: "/spotify-music"
     },
     {
       title: "Consumer Financial Complaints",
       description: "Multiple client dashboards and analytics solutions across various companies",
       highlight: false,
-      link: "/docs/consumer-financial-complaints-powerbi.md"
+      link: "/consumer-financial-complaints"
     },
     {
       title: "BI Platform Migration",
