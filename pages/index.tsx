@@ -51,14 +51,16 @@ const Index = () => {
 
   const projects = [
     {
-      title: "Spotify",
+      title: "Spotify Music",
       description: "Led development and management of Ford's €15M program dashboard for chargeback tracking, yielding millions in quarterly cost savings",
-      highlight: true
+      highlight: true,
+      link: "/docs/spotify-music-powerbi.md"
     },
     {
       title: "Consumer Financial Complaints",
       description: "Multiple client dashboards and analytics solutions across various companies",
-      highlight: false
+      highlight: false,
+      link: "/docs/consumer-financial-complaints-powerbi.md"
     },
     {
       title: "BI Platform Migration",
@@ -247,11 +249,20 @@ const Index = () => {
                 key={index} 
                 className={`border-primary/20 hover:border-primary/40 transition-all hover:shadow-glow ${
                   project.highlight ? 'ring-2 ring-accent/50' : ''
-                }`}
+                } ${project.link ? 'cursor-pointer' : ''}`}
+                onClick={() => project.link && window.open(project.link, '_blank')}
               >
                 <CardHeader>
                   <div className="flex items-start justify-between gap-4">
-                    <CardTitle className="text-2xl">{project.title}</CardTitle>
+                    <CardTitle className="text-2xl">
+                      {project.link ? (
+                        <a href={project.link} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                          {project.title}
+                        </a>
+                      ) : (
+                        project.title
+                      )}
+                    </CardTitle>
                     {project.highlight && (
                       <Badge className="bg-gradient-to-r from-primary to-accent">Featured</Badge>
                     )}
