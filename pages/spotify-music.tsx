@@ -228,7 +228,7 @@ export default function SpotifyMusic() {
           <div className="mb-8">
             <h3 className="text-2xl font-semibold mb-4">🎤 Artists Page Insights</h3>
             <div className="mb-6 rounded-lg overflow-hidden border border-border">
-              <img src="/portfolio/screenshots/spotify-artists-page.png" alt="Artists Analysis" className="w-full" />
+              <img src="/portfolio/screenshots/spotify_artists.png" alt="Artists Analysis" className="w-full" />
             </div>
             <div className="bg-muted/50 p-6 rounded-lg space-y-4">
               <div>
