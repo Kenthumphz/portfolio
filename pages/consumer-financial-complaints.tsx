@@ -1,26 +1,203 @@
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import Image from 'next/image'
 
 export default function ConsumerFinancialComplaints() {
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground">
       <Header />
-      <main className="flex-1 container mx-auto px-6 py-16 max-w-4xl">
-        <h1 className="text-4xl font-bold mb-6">Consumer Financial Complaints - Power BI Dashboard</h1>
-        
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">Overview</h2>
-          <p className="text-muted-foreground text-lg">
-            An interactive Power BI dashboard analyzing consumer financial complaints data, providing insights into complaint trends, 
-            patterns, and resolution metrics across financial institutions.
+      <main className="flex-1 container mx-auto px-6 py-16 max-w-5xl">
+        {/* Header */}
+        <div className="mb-12">
+          <h1 className="text-5xl font-bold mb-4">🏦 Consumer Financial Complaints Analytics Dashboard</h1>
+          <div className="flex gap-3 mb-6">
+            <a href="https://app.powerbi.com/view?r=eyJrIjoiYTc5ZmExMTctZDRiZS00MzY3LWJkYjgtZDUyOWU0NDc2NjAzIiwidCI6IjZkM2NiNjliLTE5M2EtNDM3MS04MDQxLTk3MjBhMWM2MmVkNCJ9" target="_blank" rel="noopener noreferrer" className="inline-block">
+              <img src="https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black" alt="Power BI" />
+            </a>
+            <img src="https://img.shields.io/badge/DAX-0078D4?style=for-the-badge&logo=microsoft&logoColor=white" alt="DAX" />
+            <img src="https://img.shields.io/badge/Status-Live-success?style=for-the-badge" alt="Status" />
+          </div>
+        </div>
+
+        {/* Business Problem */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold mb-4">📋 Business Problem</h2>
+          <p className="text-muted-foreground text-lg mb-4">
+            Financial regulators, consumer advocacy groups, and financial institutions struggle to identify systemic patterns 
+            in consumer complaints across the financial services industry. With thousands of complaints submitted through various 
+            channels regarding different products, issues, and companies, stakeholders lack a unified analytical framework.
           </p>
+          <div className="bg-muted/50 p-6 rounded-lg">
+            <p className="font-semibold mb-2">Current Gaps:</p>
+            <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+              <li>No centralized view of complaint trends across financial products and geographies</li>
+              <li>Limited visibility into company response performance and resolution timelines</li>
+              <li>Difficulty identifying emerging issues before they escalate into widespread problems</li>
+              <li>Inability to correlate complaint patterns with company characteristics</li>
+              <li>No comparative analysis of submission channels and their impact on outcomes</li>
+              <li>Missing insights into regional hotspots requiring regulatory attention</li>
+            </ul>
+          </div>
         </section>
 
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">Dashboard</h2>
-          <div className="rounded-lg overflow-hidden border border-border shadow-lg">
+        {/* Objective */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold mb-4">🎯 Objective</h2>
+          <p className="text-muted-foreground text-lg mb-4">
+            Develop an interactive Power BI dashboard that transforms raw consumer complaint data into actionable regulatory and operational insights:
+          </p>
+          <ul className="list-decimal list-inside space-y-2 text-muted-foreground ml-4">
+            <li><strong>Temporal Pattern Analysis:</strong> Identify when complaints rise or fall over time, detecting seasonal trends and anomalies</li>
+            <li><strong>Geographic Hotspot Identification:</strong> Pinpoint which states and regions experience the highest complaint volumes</li>
+            <li><strong>Product Performance Tracking:</strong> Determine which products and sub-products drive the most consumer complaints</li>
+            <li><strong>Issue Severity Assessment:</strong> Analyze which issues and sub-issues are most common or most severe</li>
+            <li><strong>Response Efficiency Monitoring:</strong> Measure how fast and how timely company responses are</li>
+            <li><strong>Comparative Company Analysis:</strong> Identify companies with highest complaint rates relative to market share</li>
+            <li><strong>Company Trait Correlation:</strong> Evaluate whether company characteristics correlate with outcomes</li>
+            <li><strong>Channel Performance Evaluation:</strong> Compare submission channels for differences in response speed</li>
+          </ul>
+        </section>
+
+        {/* Dataset */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold mb-4">📊 Dataset</h2>
+          <div className="bg-muted/50 p-6 rounded-lg mb-6">
+            <p className="font-semibold mb-2">Source: Consumer Financial Protection Bureau (CFPB) Complaint Database</p>
+            <p className="font-semibold mb-4">Star Schema Data Model with 5 Core Tables</p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+              <div className="bg-background p-4 rounded-lg border border-border">
+                <p className="text-3xl font-bold text-primary">500K+</p>
+                <p className="text-sm text-muted-foreground">Complaint Records</p>
+              </div>
+              <div className="bg-background p-4 rounded-lg border border-border">
+                <p className="text-3xl font-bold text-primary">50+</p>
+                <p className="text-sm text-muted-foreground">States & Territories</p>
+              </div>
+              <div className="bg-background p-4 rounded-lg border border-border">
+                <p className="text-3xl font-bold text-primary">15+</p>
+                <p className="text-sm text-muted-foreground">Product Categories</p>
+              </div>
+              <div className="bg-background p-4 rounded-lg border border-border">
+                <p className="text-3xl font-bold text-primary">1000+</p>
+                <p className="text-sm text-muted-foreground">Companies</p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="bg-muted/50 p-6 rounded-lg mb-6">
+            <h3 className="font-bold text-xl mb-3">Star Schema Architecture</h3>
+            <ul className="space-y-2 text-muted-foreground">
+              <li>📊 <strong>Fact Table:</strong> Complaints (central transaction table with 500K+ records)</li>
+              <li>🏢 <strong>Company Dim:</strong> Company metadata, size tier, market share, enforcement history</li>
+              <li>🗺️ <strong>Region Dim:</strong> Geographic information, state codes, census regions, coordinates</li>
+              <li>📅 <strong>Date Dim:</strong> Time intelligence, year/quarter/month/day hierarchies</li>
+              <li>📈 <strong>Facts Table:</strong> Aggregated metrics, response times, performance indicators</li>
+            </ul>
+          </div>
+
+          <div className="overflow-x-auto mb-6">
+            <table className="min-w-full border border-border rounded-lg text-sm">
+              <thead className="bg-muted">
+                <tr>
+                  <th className="px-4 py-3 text-left font-semibold">Key Column</th>
+                  <th className="px-4 py-3 text-left font-semibold">Data Type</th>
+                  <th className="px-4 py-3 text-left font-semibold">Description</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-border">
+                <tr><td className="px-4 py-2">Complaint_ID</td><td className="px-4 py-2">Text</td><td className="px-4 py-2">Unique complaint identifier</td></tr>
+                <tr><td className="px-4 py-2">Date_received</td><td className="px-4 py-2">Date</td><td className="px-4 py-2">Date complaint was received</td></tr>
+                <tr><td className="px-4 py-2">Product</td><td className="px-4 py-2">Text</td><td className="px-4 py-2">Financial product category</td></tr>
+                <tr><td className="px-4 py-2">Issue</td><td className="px-4 py-2">Text</td><td className="px-4 py-2">Primary complaint issue</td></tr>
+                <tr><td className="px-4 py-2">Company_Response_Date</td><td className="px-4 py-2">Date</td><td className="px-4 py-2">Date of company response</td></tr>
+                <tr><td className="px-4 py-2">Timely_response</td><td className="px-4 py-2">Text</td><td className="px-4 py-2">Whether response was timely</td></tr>
+                <tr><td className="px-4 py-2">Submitted_via</td><td className="px-4 py-2">Text</td><td className="px-4 py-2">Submission channel</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        {/* Tools Used */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold mb-4">🛠️ Tools Used</h2>
+          <div className="grid md:grid-cols-2 gap-4">
+            <div className="bg-muted/50 p-6 rounded-lg border border-border">
+              <h3 className="font-bold text-xl mb-2">Power BI Desktop</h3>
+              <p className="text-muted-foreground">Dashboard development and data visualization</p>
+            </div>
+            <div className="bg-muted/50 p-6 rounded-lg border border-border">
+              <h3 className="font-bold text-xl mb-2">DAX</h3>
+              <p className="text-muted-foreground">Custom metrics, KPIs, time intelligence calculations</p>
+            </div>
+            <div className="bg-muted/50 p-6 rounded-lg border border-border">
+              <h3 className="font-bold text-xl mb-2">Power Query (M)</h3>
+              <p className="text-muted-foreground">ETL processes, data cleaning, and transformation</p>
+            </div>
+            <div className="bg-muted/50 p-6 rounded-lg border border-border">
+              <h3 className="font-bold text-xl mb-2">Star Schema Modeling</h3>
+              <p className="text-muted-foreground">Optimized data model for performance and scalability</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Analysis Approach */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold mb-4">🔍 Analysis Approach</h2>
+          
+          <div className="space-y-6">
+            <div className="bg-muted/50 p-6 rounded-lg">
+              <h3 className="font-bold text-xl mb-3">1️⃣ Data Preparation</h3>
+              <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+                <li>Retrieved consumer complaint data from CFPB public database</li>
+                <li>Removed duplicate complaint records and handled missing values</li>
+                <li>Standardized company names and geographic information</li>
+                <li>Created response time calculations (date differences in days)</li>
+                <li>Generated time intelligence columns (Day, Month, Year, Quarter)</li>
+              </ul>
+            </div>
+
+            <div className="bg-muted/50 p-6 rounded-lg">
+              <h3 className="font-bold text-xl mb-3">2️⃣ Star Schema Design</h3>
+              <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+                <li>Built central Fact Table (Complaints) with 500K+ records</li>
+                <li>Created 4 Dimension Tables: Company, Region, Date, Facts</li>
+                <li>Established one-to-many relationships from dimensions to fact</li>
+                <li>Implemented Time and Product slicers for interactive filtering</li>
+                <li>Optimized model for sub-second query response times</li>
+              </ul>
+            </div>
+
+            <div className="bg-muted/50 p-6 rounded-lg">
+              <h3 className="font-bold text-xl mb-3">3️⃣ DAX Measures</h3>
+              <p className="text-muted-foreground mb-2"><strong>Key Metrics Created:</strong></p>
+              <ul className="list-disc list-inside space-y-1 text-muted-foreground text-sm">
+                <li>Total Complaints, Complaint Count, Complaints per 1% Market Share</li>
+                <li>Average Response Time (Days), Timely Response Rate</li>
+                <li>YoY Growth, MoM Change, Complaint Trends</li>
+                <li>Geographic metrics, Company performance indicators</li>
+              </ul>
+            </div>
+
+            <div className="bg-muted/50 p-6 rounded-lg">
+              <h3 className="font-bold text-xl mb-3">4️⃣ Visualization Design</h3>
+              <p className="text-muted-foreground mb-2"><strong>Multi-Page Dashboard:</strong></p>
+              <ul className="list-disc list-inside space-y-1 text-muted-foreground">
+                <li>📊 Overview: Executive summary with KPIs and trends</li>
+                <li>🗺️ Geographic Analysis: State-level maps and regional breakdowns</li>
+                <li>📦 Product Analysis: Product/sub-product hierarchical analysis</li>
+                <li>🏢 Company Performance: Response times and comparative metrics</li>
+                <li>📨 Channel Analysis: Submission method performance</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* Dashboard */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold mb-6">📱 Interactive Dashboard</h2>
+          <div className="rounded-lg overflow-hidden border-2 border-border shadow-2xl">
             <iframe 
-              title="Consumer Financial Complaints" 
+              title="Consumer Financial Complaints Analytics" 
               width="100%" 
               height="541.25" 
               src="https://app.powerbi.com/view?r=eyJrIjoiYTc5ZmExMTctZDRiZS00MzY3LWJkYjgtZDUyOWU0NDc2NjAzIiwidCI6IjZkM2NiNjliLTE5M2EtNDM3MS04MDQxLTk3MjBhMWM2MmVkNCJ9&embedImagePlaceholder=true" 
@@ -30,48 +207,135 @@ export default function ConsumerFinancialComplaints() {
           </div>
         </section>
 
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">Key Features</h2>
-          <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-            <li>Complaint Trends Analysis: Track complaint volumes over time</li>
-            <li>Product Category Breakdown: Visualize complaints by financial product type</li>
-            <li>Geographic Distribution: Map complaints by state and region</li>
-            <li>Company Performance: Compare financial institutions by complaint metrics</li>
-            <li>Resolution Tracking: Monitor complaint resolution rates and timelines</li>
-            <li>Interactive Filters: Dynamic filtering by date, product, company, and issue type</li>
-          </ul>
+        {/* Key Insights */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold mb-6">💡 Key Insights</h2>
+          
+          {/* Data Model Insights */}
+          <div className="mb-8">
+            <h3 className="text-2xl font-semibold mb-4">📊 Data Model Architecture</h3>
+            <div className="mb-6 rounded-lg overflow-hidden border border-border">
+              <img src="/portfolio/screenshots/consumer_financial_complaints_model.png" alt="Star Schema Data Model" className="w-full" />
+            </div>
+            <div className="bg-muted/50 p-6 rounded-lg space-y-4">
+              <div>
+                <h4 className="font-bold text-lg mb-2">Star Schema Strengths:</h4>
+                <ul className="list-disc list-inside space-y-1 text-muted-foreground">
+                  <li><strong>Central Fact Table:</strong> 500K+ complaint records with optimized storage</li>
+                  <li><strong>4 Dimension Tables:</strong> Company, Region, Date, Facts for comprehensive analysis</li>
+                  <li><strong>One-to-Many Relationships:</strong> Ensures data integrity and efficient querying</li>
+                  <li><strong>Independent Slicers:</strong> Time and Product slicers enable flexible filtering</li>
+                  <li><strong>Sub-Second Performance:</strong> Optimized model delivers fast query response</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-bold text-lg mb-2">Scalability & Performance:</h4>
+                <ul className="list-disc list-inside space-y-1 text-muted-foreground">
+                  <li>Scalable design supports millions of complaint records</li>
+                  <li>Efficient DAX calculations with proper filter context</li>
+                  <li>Clear separation of transactional and descriptive data</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </section>
 
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">Technologies Used</h2>
-          <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-            <li>Power BI: Data visualization and dashboard development</li>
-            <li>DAX: Custom measures and calculations</li>
-            <li>Power Query: Data transformation and cleaning</li>
-          </ul>
+        {/* Recommendations */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold mb-4">🎯 Recommendations</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-muted/50 p-6 rounded-lg border border-border">
+              <h3 className="font-bold text-lg mb-3">For Regulators</h3>
+              <ul className="list-decimal list-inside space-y-2 text-muted-foreground text-sm">
+                <li>Focus oversight on hotspot states with high complaint volumes</li>
+                <li>Develop targeted regulations for high-complaint products</li>
+                <li>Establish industry-wide response time benchmarks</li>
+                <li>Tailor requirements based on company size correlation</li>
+              </ul>
+            </div>
+            <div className="bg-muted/50 p-6 rounded-lg border border-border">
+              <h3 className="font-bold text-lg mb-3">For Financial Institutions</h3>
+              <ul className="list-decimal list-inside space-y-2 text-muted-foreground text-sm">
+                <li>Optimize faster-responding submission channels (web)</li>
+                <li>Monitor emerging issues for proactive resolution</li>
+                <li>Benchmark performance against similar-sized peers</li>
+                <li>Provide targeted training in high-complaint regions</li>
+              </ul>
+            </div>
+            <div className="bg-muted/50 p-6 rounded-lg border border-border">
+              <h3 className="font-bold text-lg mb-3">For Consumers</h3>
+              <ul className="list-decimal list-inside space-y-2 text-muted-foreground text-sm">
+                <li>Use web-based channels for faster response times</li>
+                <li>Clearly categorize complaints for efficient routing</li>
+                <li>Research company complaint rates before selection</li>
+              </ul>
+            </div>
+            <div className="bg-muted/50 p-6 rounded-lg border border-border">
+              <h3 className="font-bold text-lg mb-3">Dashboard Enhancements</h3>
+              <ul className="list-decimal list-inside space-y-2 text-muted-foreground text-sm">
+                <li>Integrate predictive analytics for trend forecasting</li>
+                <li>Add sentiment analysis to complaint narratives</li>
+                <li>Implement real-time incremental refresh</li>
+                <li>Develop mobile-optimized dashboard version</li>
+              </ul>
+            </div>
+          </div>
         </section>
 
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">Dashboard Insights</h2>
-          <p className="text-muted-foreground mb-4">The dashboard enables stakeholders to:</p>
-          <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-            <li>Identify trending complaint issues across financial products</li>
-            <li>Monitor institutional performance in handling complaints</li>
-            <li>Detect patterns in complaint resolution</li>
-            <li>Support data-driven decision making for customer service improvements</li>
-          </ul>
+        {/* Skills Demonstrated */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold mb-4">🏆 Skills Demonstrated</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-muted/50 p-6 rounded-lg">
+              <h3 className="font-bold text-lg mb-3">Technical Skills</h3>
+              <ul className="space-y-1 text-sm text-muted-foreground">
+                <li>✅ Power BI Development</li>
+                <li>✅ Star Schema Modeling</li>
+                <li>✅ DAX Proficiency</li>
+                <li>✅ Power Query ETL</li>
+                <li>✅ Geographic Visualization</li>
+                <li>✅ Performance Optimization</li>
+              </ul>
+            </div>
+            <div className="bg-muted/50 p-6 rounded-lg">
+              <h3 className="font-bold text-lg mb-3">Analytical Skills</h3>
+              <ul className="space-y-1 text-sm text-muted-foreground">
+                <li>✅ Regulatory Analytics</li>
+                <li>✅ Exploratory Analysis</li>
+                <li>✅ Comparative Analysis</li>
+                <li>✅ Temporal Analysis</li>
+                <li>✅ Geographic Analysis</li>
+                <li>✅ Critical Thinking</li>
+              </ul>
+            </div>
+            <div className="bg-muted/50 p-6 rounded-lg">
+              <h3 className="font-bold text-lg mb-3">Business Acumen</h3>
+              <ul className="space-y-1 text-sm text-muted-foreground">
+                <li>✅ Stakeholder Management</li>
+                <li>✅ KPI Selection</li>
+                <li>✅ Impact Communication</li>
+                <li>✅ Compliance Awareness</li>
+                <li>✅ Problem Scoping</li>
+              </ul>
+            </div>
+          </div>
         </section>
 
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">Use Cases</h2>
-          <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-            <li>Regulatory Compliance: Monitor complaint trends for compliance reporting</li>
-            <li>Customer Service: Identify areas for service improvement</li>
-            <li>Risk Management: Detect emerging issues early</li>
-            <li>Executive Reporting: High-level overview of complaint metrics</li>
-            <li>Operational Analysis: Deep dive into specific complaint categories</li>
-          </ul>
+        {/* View Live Dashboard CTA */}
+        <section className="mb-12">
+          <div className="bg-gradient-to-r from-primary/20 to-primary/10 p-8 rounded-lg border-2 border-primary/50 text-center">
+            <h2 className="text-2xl font-bold mb-4">🔗 Explore the Interactive Dashboard</h2>
+            <a 
+              href="https://app.powerbi.com/view?r=eyJrIjoiYTc5ZmExMTctZDRiZS00MzY3LWJkYjgtZDUyOWU0NDc2NjAzIiwidCI6IjZkM2NiNjliLTE5M2EtNDM3MS04MDQxLTk3MjBhMWM2MmVkNCJ9"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-primary text-primary-foreground px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+            >
+              View Live Dashboard →
+            </a>
+          </div>
         </section>
+
       </main>
       <Footer />
     </div>
