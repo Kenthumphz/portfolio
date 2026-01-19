@@ -215,7 +215,7 @@ export default function ConsumerFinancialComplaints() {
           <div className="mb-8">
             <h3 className="text-2xl font-semibold mb-4">📊 Overview Page Insights</h3>
             <div className="mb-6 rounded-lg overflow-hidden border border-border">
-              <img src="/portfolio/screenshots/consumer_financial_compliants_overview.png" alt="Overview Dashboard" className="w-full" />
+              <img src="/portfolio/screenshots/consumer_financial_complaints_overview.png" alt="Overview Dashboard" className="w-full" />
             </div>
             <div className="bg-muted/50 p-6 rounded-lg space-y-4">
               <div>
@@ -252,7 +252,7 @@ export default function ConsumerFinancialComplaints() {
           <div className="mb-8">
             <h3 className="text-2xl font-semibold mb-4">📋 Complaints Page Insights</h3>
             <div className="mb-6 rounded-lg overflow-hidden border border-border">
-              <img src="/portfolio/screenshots/consumer_financial_compliants_complaints.png" alt="Complaints Analysis" className="w-full" />
+              <img src="/portfolio/screenshots/consumer_financial_complaints_complaints.png" alt="Complaints Analysis" className="w-full" />
             </div>
             <div className="bg-muted/50 p-6 rounded-lg space-y-4">
               <div>
@@ -287,7 +287,7 @@ export default function ConsumerFinancialComplaints() {
           <div className="mb-8">
             <h3 className="text-2xl font-semibold mb-4">📨 Response Performance Insights</h3>
             <div className="mb-6 rounded-lg overflow-hidden border border-border">
-              <img src="/portfolio/screenshots/consumer_financial_compliants_responses.png" alt="Response Performance" className="w-full" />
+              <img src="/portfolio/screenshots/consumer_financial_complaints_responses.png" alt="Response Performance" className="w-full" />
             </div>
             <div className="bg-muted/50 p-6 rounded-lg space-y-4">
               <div>
@@ -323,7 +323,7 @@ export default function ConsumerFinancialComplaints() {
           <div className="mb-8">
             <h3 className="text-2xl font-semibold mb-4">🏢 Company & Product Analysis Insights</h3>
             <div className="mb-6 rounded-lg overflow-hidden border border-border">
-              <img src="/portfolio/screenshots/consumer_financial_compliants_company_products.png" alt="Company Products Analysis" className="w-full" />
+              <img src="/portfolio/screenshots/consumer_financial_complaints_company_products.png" alt="Company Products Analysis" className="w-full" />
             </div>
             <div className="bg-muted/50 p-6 rounded-lg space-y-4">
               <div>

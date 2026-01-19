@@ -270,7 +270,7 @@ Develop an interactive Power BI dashboard that transforms raw consumer complaint
 
 ### 📊 Overview Page Insights
 
-![Overview Dashboard](/portfolio/screenshots/consumer_financial_compliants_overview.png)
+![Overview Dashboard](/portfolio/screenshots/consumer_financial_complaints_overview.png)
 
 **Complaint Volume & Trends:**
 - **500K+ total complaints** analyzed across multiple years, financial products, and geographic regions
@@ -294,7 +294,7 @@ Develop an interactive Power BI dashboard that transforms raw consumer complaint
 
 ### 📋 Complaints Page Insights
 
-![Complaints Analysis](/portfolio/screenshots/consumer_financial_compliants_complaints.png)
+![Complaints Analysis](/portfolio/screenshots/consumer_financial_complaints_complaints.png)
 
 **Issue Breakdown:**
 - **Top 3 issues drive 60%** of all complaints:
@@ -320,7 +320,7 @@ Develop an interactive Power BI dashboard that transforms raw consumer complaint
 
 ### 📨 Response Performance Insights
 
-![Response Analysis](/portfolio/screenshots/consumer_financial_compliants_responses.png)
+![Response Analysis](/portfolio/screenshots/consumer_financial_complaints_responses.png)
 
 **Response Time Metrics:**
 - **Average response time**: 14.2 days across all companies and products
@@ -350,7 +350,7 @@ Develop an interactive Power BI dashboard that transforms raw consumer complaint
 
 ### 🏢 Company & Product Analysis Insights
 
-![Company Products Analysis](/portfolio/screenshots/consumer_financial_compliants_company_products.png)
+![Company Products Analysis](/portfolio/screenshots/consumer_financial_complaints_company_products.png)
 
 **Company Complaint Concentration:**
 - **Top 10 companies receive 55%** of all complaints
