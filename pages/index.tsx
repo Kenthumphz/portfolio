@@ -52,19 +52,36 @@ const Index = () => {
   const projects = [
     {
       title: "Spotify Music",
-      description: "Led development and management of Ford's €15M program dashboard for chargeback tracking, yielding millions in quarterly cost savings",
+      year: "2025",
+      description: "The business lacked clarity on sales patterns and customer behavior, risking ineffective pricing and missed revenue. I analyzed Walmart sales data to uncover trends, seasonality, and top-performing products, enabling better inventory planning, targeted promotions, and informed sales strategies.",
+      image: "/portfolio/screenshots/spotify-overview.png",
+      tags: ["Retail Analytics", "Power BI", "Sales Analysis", "Trend Analysis", "Inventory Insights", "Dashboard Design"],
       highlight: true,
       link: "/portfolio/spotify-music"
     },
     {
       title: "Consumer Financial Complaints",
-      description: "Multiple client dashboards and analytics solutions across various companies",
+      year: "2025",
+      description: "Healthcare administrators had limited visibility into patient risk, costs, and hospital performance. I analyzed admissions, length of stay, and cost data across hospitals using Power BI to highlight high-risk areas and cost-intensive trends, supporting proactive care and efficient resource allocation.",
+      image: "/portfolio/screenshots/consumer_financial_complaints_overview.png",
+      tags: ["Healthcare Analytics", "Power BI", "Cost Analysis", "Data Storytelling", "DAXx", "Stakeholder Insights"],
       highlight: false,
       link: "/portfolio/consumer-financial-complaints"
     },
     {
-      title: "BI Platform Migration",
-      description: "Migration of organizational reports from QlikView to Tableau and finally to Power BI",
+      title: "Airbnb Seattle EDA",
+      year: "2025",
+      description: "Airbnb hosts and investors lacked insight into pricing and revenue drivers. Using SQL and Python, I performed exploratory analysis, examined pricing trends, customer sentiment, and host activity to identify key factors supporting smarter pricing and listing strategies.",
+      image: "/portfolio/screenshots/placeholder-airbnb.png",
+      tags: ["Pricing Analytics", "SQL", "Exploratory Data Analysis", "Market Analysis", "Customer Insights", "Data Storytelling"],
+      highlight: false
+    },
+    {
+      title: "HR Analytics: Voice of Employees (VOE)",
+      year: "2025",
+      description: "The organization had employee data but had limited visibility into engagement and satisfaction. I analyzed workforce and feedback data to identify engagement patterns and drivers of attrition, helping Human Resources(HR) design more effective retention and engagement strategies.",
+      image: "/portfolio/screenshots/placeholder-hr.png",
+      tags: ["People Analytics", "Microsoft Excel", "Employee Engagement", "Performance Analysis", "Workforce Insights", "HR Analytics"],
       highlight: false
     }
   ];
@@ -243,33 +260,54 @@ const Index = () => {
       <section id="projects" className="px-6 py-16 md:py-24">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-4xl font-bold mb-12">Notable Projects</h2>
-          <div className="space-y-6">
+          <div className="grid md:grid-cols-2 gap-6">
             {projects.map((project, index) => (
               <Card 
                 key={index} 
-                className={`border-primary/20 hover:border-primary/40 transition-all hover:shadow-glow ${
+                className={`border-primary/20 hover:border-primary/40 transition-all hover:shadow-glow overflow-hidden ${
                   project.highlight ? 'ring-2 ring-accent/50' : ''
                 } ${project.link ? 'cursor-pointer' : ''}`}
                 onClick={() => project.link && window.open(project.link, '_blank')}
               >
-                <CardHeader>
-                  <div className="flex items-start justify-between gap-4">
-                    <CardTitle className="text-2xl">
-                      {project.link ? (
-                        <a href={project.link} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
-                          {project.title}
-                        </a>
-                      ) : (
-                        project.title
-                      )}
-                    </CardTitle>
-                    {project.highlight && (
+                {/* Project Preview Image */}
+                <div className="relative h-48 bg-muted overflow-hidden">
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
+                  />
+                  {project.highlight && (
+                    <div className="absolute top-3 right-3">
                       <Badge className="bg-gradient-to-r from-primary to-accent">Featured</Badge>
-                    )}
+                    </div>
+                  )}
+                </div>
+                
+                <CardHeader className="pb-3">
+                  <div className="mb-2">
+                    <div className="flex items-start justify-between gap-4">
+                      <CardTitle className="text-2xl">
+                        {project.link ? (
+                          <a href={project.link} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                            {project.title}
+                          </a>
+                        ) : (
+                          project.title
+                        )}
+                      </CardTitle>
+                      <Badge variant="outline" className="text-xs">{project.year}</Badge>
+                    </div>
                   </div>
                 </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground text-lg">{project.description}</p>
+                <CardContent className="space-y-4">
+                  <p className="text-muted-foreground text-sm leading-relaxed">{project.description}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {project.tags.map((tag, tagIndex) => (
+                      <Badge key={tagIndex} variant="secondary" className="text-xs">
+                        {tag}
+                      </Badge>
+                    ))}
+                  </div>
                 </CardContent>
               </Card>
             ))}
