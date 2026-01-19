@@ -54,9 +54,9 @@ const Index = () => {
       title: "Spotify Music",
       year: "2025",
       description: "The business lacked clarity on sales patterns and customer behavior, risking ineffective pricing and missed revenue. I analyzed Walmart sales data to uncover trends, seasonality, and top-performing products, enabling better inventory planning, targeted promotions, and informed sales strategies.",
-      image: "/portfolio/screenshots/spotify-overview.png",
+      image: "/portfolio/screenshots/spotify_overview.png",
       tags: ["Retail Analytics", "Power BI", "Sales Analysis", "Trend Analysis", "Inventory Insights", "Dashboard Design"],
-      highlight: true,
+      highlight: false,
       link: "/portfolio/spotify-music"
     },
     {
@@ -65,24 +65,8 @@ const Index = () => {
       description: "Healthcare administrators had limited visibility into patient risk, costs, and hospital performance. I analyzed admissions, length of stay, and cost data across hospitals using Power BI to highlight high-risk areas and cost-intensive trends, supporting proactive care and efficient resource allocation.",
       image: "/portfolio/screenshots/consumer_financial_complaints_overview.png",
       tags: ["Healthcare Analytics", "Power BI", "Cost Analysis", "Data Storytelling", "DAXx", "Stakeholder Insights"],
-      highlight: false,
+      highlight: true,
       link: "/portfolio/consumer-financial-complaints"
-    },
-    {
-      title: "Airbnb Seattle EDA",
-      year: "2025",
-      description: "Airbnb hosts and investors lacked insight into pricing and revenue drivers. Using SQL and Python, I performed exploratory analysis, examined pricing trends, customer sentiment, and host activity to identify key factors supporting smarter pricing and listing strategies.",
-      image: "/portfolio/screenshots/placeholder-airbnb.png",
-      tags: ["Pricing Analytics", "SQL", "Exploratory Data Analysis", "Market Analysis", "Customer Insights", "Data Storytelling"],
-      highlight: false
-    },
-    {
-      title: "HR Analytics: Voice of Employees (VOE)",
-      year: "2025",
-      description: "The organization had employee data but had limited visibility into engagement and satisfaction. I analyzed workforce and feedback data to identify engagement patterns and drivers of attrition, helping Human Resources(HR) design more effective retention and engagement strategies.",
-      image: "/portfolio/screenshots/placeholder-hr.png",
-      tags: ["People Analytics", "Microsoft Excel", "Employee Engagement", "Performance Analysis", "Workforce Insights", "HR Analytics"],
-      highlight: false
     }
   ];
 
