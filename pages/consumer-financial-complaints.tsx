@@ -66,7 +66,7 @@ export default function ConsumerFinancialComplaints() {
             <p className="font-semibold mb-4">Star Schema Data Model with 5 Core Tables</p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
               <div className="bg-background p-4 rounded-lg border border-border">
-                <p className="text-3xl font-bold text-primary">500K+</p>
+                <p className="text-3xl font-bold text-primary">63K+</p>
                 <p className="text-sm text-muted-foreground">Complaint Records</p>
               </div>
               <div className="bg-background p-4 rounded-lg border border-border">
@@ -221,28 +221,26 @@ export default function ConsumerFinancialComplaints() {
               <div>
                 <h4 className="font-bold text-lg mb-2">Complaint Volume & Trends:</h4>
                 <ul className="list-disc list-inside space-y-1 text-muted-foreground">
-                  <li><strong>500K+ total complaints</strong> analyzed across multiple years and financial products</li>
-                  <li><strong>Seasonal patterns detected:</strong> Complaint volumes spike during tax season (Q1) and holiday periods (Q4)</li>
-                  <li><strong>YoY growth trends:</strong> Recent years show 15-20% increase in complaint submissions</li>
-                  <li><strong>Peak complaint months:</strong> January, March, and December consistently highest</li>
+                  <li><strong>63K+ total complaints</strong> analyzed across multiple years and financial products</li>
+                  <li><strong>Seasonal patterns detected:</strong> Complaint volumes spike during summer and holiday periods (between Q2 and Q3)</li>
+                  <li><strong>Peak complaint months:</strong> May, June, and July are consistently highest</li>
+                  <li><strong>Average Response:</strong> Generally takes an average of two weeks (<strong>15.09 days</strong>) for a complaint to get a response</li>
                 </ul>
               </div>
               <div>
                 <h4 className="font-bold text-lg mb-2">Geographic Distribution:</h4>
                 <ul className="list-disc list-inside space-y-1 text-muted-foreground">
-                  <li><strong>Top 5 states account for 45%</strong> of all complaints: CA, FL, TX, NY, GA</li>
-                  <li><strong>Per capita analysis:</strong> Delaware and South Dakota show disproportionately high rates</li>
+                  <li><strong>Top 4 states account for 46%</strong> of all complaints: California, Florida, Texas, New York</li>
                   <li><strong>Regional hotspots:</strong> Southeast and West Coast regions dominate</li>
-                  <li><strong>Urban concentration:</strong> Metropolitan areas generate 70%+ of volume</li>
                 </ul>
               </div>
               <div>
                 <h4 className="font-bold text-lg mb-2">Product Performance:</h4>
                 <ul className="list-disc list-inside space-y-1 text-muted-foreground">
-                  <li><strong>Credit reporting leads:</strong> 35-40% of all complaints</li>
-                  <li><strong>Debt collection second:</strong> 20-25% of complaints</li>
-                  <li><strong>Mortgage concerns:</strong> 15% of complaints</li>
-                  <li><strong>Rising trends:</strong> Student loan and prepaid card complaints increasing</li>
+                  <li><strong>Checking or savings account leads (Product):</strong> 42.2% of all complaints</li>
+                  <li><strong>Credit card or prepaid card second (Product):</strong> 27.6% of complaints</li>
+                  <li><strong>Checking account leads (Sub-Product):</strong> 43.4% of all complaints</li>
+                  <li><strong>Credit card second (Sub-Product):</strong> 28.0% of complaints</li>
                 </ul>
               </div>
             </div>
@@ -258,25 +256,15 @@ export default function ConsumerFinancialComplaints() {
               <div>
                 <h4 className="font-bold text-lg mb-2">Issue Breakdown:</h4>
                 <ul className="list-disc list-inside space-y-1 text-muted-foreground">
-                  <li><strong>Top 3 issues drive 60%</strong> of all complaints: Incorrect credit info (25%), Debt not owed (18%), Communication tactics (17%)</li>
-                  <li><strong>Emerging issues:</strong> Identity theft and fraud complaints up 30% in recent periods</li>
-                  <li><strong>Sub-issue granularity:</strong> Account status errors, excessive contact, fee disputes most common</li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-bold text-lg mb-2">Submission Channel Analysis:</h4>
-                <ul className="list-disc list-inside space-y-1 text-muted-foreground">
-                  <li><strong>Web submissions dominate:</strong> 75% of complaints via online portal</li>
-                  <li><strong>Phone submissions:</strong> 15% of total, typically urgent/complex issues</li>
-                  <li><strong>Mail/Fax declining:</strong> Less than 10% and decreasing annually</li>
-                  <li><strong>Referral source:</strong> 40% from consumer advocacy referrals</li>
+                  <li><strong>Top 5 issues drive 47.9%</strong> of all complaints: Managing an account (24.2%), Incorrect Information (7.9%), Purchase problem (7.1%), Closing account (4.7%), Payment troubles (4.5%)</li>
+                  <li><strong>Sub-issue granularity:</strong> Deposits and withdrawals, problems using debit cards, wrong information and identity most common</li>
                 </ul>
               </div>
               <div>
                 <h4 className="font-bold text-lg mb-2">Complaint Status:</h4>
                 <ul className="list-disc list-inside space-y-1 text-muted-foreground">
-                  <li><strong>Closed with explanation:</strong> 65% of complaints</li>
-                  <li><strong>Closed with relief:</strong> 18% result in consumer relief</li>
+                  <li><strong>Timely response:</strong> 93.7% of complaints were responded to on time with an average response of 15 days</li>
+                  <li><strong>Region:</strong> 37.0% complaints (the most) over time come from the South</li>
                   <li><strong>Disputed responses:</strong> 8% of consumers dispute company responses</li>
                 </ul>
               </div>
@@ -293,27 +281,17 @@ export default function ConsumerFinancialComplaints() {
               <div>
                 <h4 className="font-bold text-lg mb-2">Response Time Metrics:</h4>
                 <ul className="list-disc list-inside space-y-1 text-muted-foreground">
-                  <li><strong>Average response time:</strong> 14.2 days across all companies and products</li>
-                  <li><strong>Timely response rate:</strong> 97.3% of complaints receive timely responses (within 15 days)</li>
-                  <li><strong>Fastest responders:</strong> Large national banks average 8-10 days</li>
-                  <li><strong>Slowest responders:</strong> Smaller regional institutions average 18-22 days</li>
+                  <li><strong>Average response time:</strong> 15 days across all companies and products</li>
+                  <li><strong>Timely response rate:</strong> 93.8% of complaints receive timely responses (within 15 days)</li>
+                  <li><strong>Fastest responders:</strong> Large companies with an average of 15.06 days and South Dakota with 14.92 days</li>
+                  <li><strong>Slowest responders:</strong> Medium regional institutions average 15.14 days and Kansas with 15.28 days</li>
                 </ul>
               </div>
               <div>
-                <h4 className="font-bold text-lg mb-2">Channel Impact on Response Speed:</h4>
+                <h4 className="font-bold text-lg mb-2">Response Rate Metrics:</h4>
                 <ul className="list-disc list-inside space-y-1 text-muted-foreground">
-                  <li><strong>Web submissions:</strong> 11.5 days average (fastest)</li>
-                  <li><strong>Phone submissions:</strong> 13.8 days average</li>
-                  <li><strong>Mail/Fax:</strong> 16.9 days average (slowest)</li>
-                  <li><strong>Electronic advantage:</strong> 30% faster than traditional methods</li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-bold text-lg mb-2">Company Performance by Size:</h4>
-                <ul className="list-disc list-inside space-y-1 text-muted-foreground">
-                  <li><strong>Large companies:</strong> 96% timely rate, 10.2 days avg</li>
-                  <li><strong>Mid-size companies:</strong> 97.8% timely rate, 14.5 days avg (best performance)</li>
-                  <li><strong>Small companies:</strong> 94.2% timely rate, 18.7 days avg</li>
+                  <li><strong>Channel:</strong> Email has 100% timely response rate, followed by Fax on 99.6%</li>
+                  <li><strong>Complaints status:</strong> 1494 cases are still open, the rest are closed</li>
                 </ul>
               </div>
             </div>
@@ -329,28 +307,11 @@ export default function ConsumerFinancialComplaints() {
               <div>
                 <h4 className="font-bold text-lg mb-2">Company Complaint Concentration:</h4>
                 <ul className="list-disc list-inside space-y-1 text-muted-foreground">
-                  <li><strong>Top 10 companies receive 55%</strong> of all complaints</li>
-                  <li><strong>Market share correlation:</strong> Large companies receive disproportionate volumes</li>
-                  <li><strong>Complaints per 1% market share:</strong> Ranges from 50 to 500+ depending on product mix</li>
-                  <li><strong>Outlier identification:</strong> Some mid-size companies show 3x higher rates than peers</li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-bold text-lg mb-2">Product-Company Matrix:</h4>
-                <ul className="list-disc list-inside space-y-1 text-muted-foreground">
-                  <li><strong>Credit reporting agencies:</strong> Dominate credit report category (85%+ share)</li>
-                  <li><strong>Large banks:</strong> Lead mortgage, credit card, and checking/savings complaints</li>
-                  <li><strong>Debt collectors:</strong> Specialized firms account for 90%+ of debt collection complaints</li>
-                  <li><strong>Fintech companies:</strong> Growing share of prepaid card and money transfer complaints</li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-bold text-lg mb-2">Product Performance Deep-Dive:</h4>
-                <ul className="list-disc list-inside space-y-1 text-muted-foreground">
-                  <li><strong>Highest complaint rate:</strong> Credit reporting (800 complaints per 1% market share)</li>
-                  <li><strong>Lowest complaint rate:</strong> Vehicle loans (120 complaints per 1% market share)</li>
-                  <li><strong>Most complex issues:</strong> Mortgage products average 2.3 sub-issues per complaint</li>
-                  <li><strong>Quickest resolution:</strong> Credit card disputes average 9.5 days response time</li>
+                  <li><strong>Top company with most complaints:</strong> COMP-0342 (83 complaints)</li>
+                  <li><strong>Market share correlation:</strong> California has the most complaints with over 20% of complaints</li>
+                  <li><strong>Top Responsive Company:</strong> COMP-0735 responds quickest with 18.37 days</li>
+                  <li><strong>Most used channel and product:</strong> Most complaints are via web (72.7%) whilst the product with the most complaints is Checking and savings account (39.7%)</li>
+                  <li><strong>Complaints per 1% market share:</strong> Ranges from 1500-1700+ depending on product mix and an average market share of 9.2%</li>
                 </ul>
               </div>
             </div>
@@ -364,36 +325,37 @@ export default function ConsumerFinancialComplaints() {
             <div className="bg-muted/50 p-6 rounded-lg border border-border">
               <h3 className="font-bold text-lg mb-3">For Regulators</h3>
               <ul className="list-decimal list-inside space-y-2 text-muted-foreground text-sm">
-                <li>Focus oversight on hotspot states with high complaint volumes</li>
-                <li>Develop targeted regulations for high-complaint products</li>
-                <li>Establish industry-wide response time benchmarks</li>
-                <li>Tailor requirements based on company size correlation</li>
+                <li>Prioritize oversight in CA, FL, TX, NY (46% of all complaints)</li>
+                <li>Allocate additional resources during Q2-Q3 peak periods (May-July)</li>
+                <li>Create specialized guidelines for "Managing an account" complaints (24.2%)</li>
+                <li>Increase oversight in the South region (37% of complaints)</li>
               </ul>
             </div>
             <div className="bg-muted/50 p-6 rounded-lg border border-border">
               <h3 className="font-bold text-lg mb-3">For Financial Institutions</h3>
               <ul className="list-decimal list-inside space-y-2 text-muted-foreground text-sm">
-                <li>Optimize faster-responding submission channels (web)</li>
-                <li>Monitor emerging issues for proactive resolution</li>
-                <li>Benchmark performance against similar-sized peers</li>
-                <li>Provide targeted training in high-complaint regions</li>
+                <li>Invest in web infrastructure (72.7% of complaints) and maintain email's 100% timely response rate</li>
+                <li>Focus on checking accounts (42.2% of complaints) - deposits, withdrawals, debit card issues</li>
+                <li>Maintain or beat 15-day average response time, especially medium institutions (15.14 days)</li>
+                <li>Address the 8% dispute rate through better initial resolution quality</li>
               </ul>
             </div>
             <div className="bg-muted/50 p-6 rounded-lg border border-border">
               <h3 className="font-bold text-lg mb-3">For Consumers</h3>
               <ul className="list-decimal list-inside space-y-2 text-muted-foreground text-sm">
-                <li>Use web-based channels for faster response times</li>
-                <li>Clearly categorize complaints for efficient routing</li>
-                <li>Research company complaint rates before selection</li>
+                <li>Use email for fastest response (100% timely rate), followed by fax (99.6%)</li>
+                <li>Avoid filing during peak months (May-July) for potentially faster resolution</li>
+                <li>Research company response times - some respond in 18.37 days vs 15-day average</li>
+                <li>Expect 15-day response - 93.8% of complaints receive timely responses</li>
               </ul>
             </div>
             <div className="bg-muted/50 p-6 rounded-lg border border-border">
               <h3 className="font-bold text-lg mb-3">Dashboard Enhancements</h3>
               <ul className="list-decimal list-inside space-y-2 text-muted-foreground text-sm">
-                <li>Integrate predictive analytics for trend forecasting</li>
-                <li>Add sentiment analysis to complaint narratives</li>
-                <li>Implement real-time incremental refresh</li>
-                <li>Develop mobile-optimized dashboard version</li>
+                <li>Build ML models to predict Q2-Q3 seasonal spikes and resource needs</li>
+                <li>Add drill-through for top 4 states (CA, FL, TX, NY) to analyze root causes</li>
+                <li>Implement real-time monitoring for 1,494 still-open cases to prevent delays</li>
+                <li>Create benchmarking tool comparing companies to 15-day average and 93.8% timely rate</li>
               </ul>
             </div>
           </div>

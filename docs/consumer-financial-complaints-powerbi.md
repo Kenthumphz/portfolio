@@ -273,22 +273,20 @@ Develop an interactive Power BI dashboard that transforms raw consumer complaint
 ![Overview Dashboard](/portfolio/screenshots/consumer_financial_complaints_overview.png)
 
 **Complaint Volume & Trends:**
-- **500K+ total complaints** analyzed across multiple years, financial products, and geographic regions
-- **Seasonal patterns detected**: Complaint volumes spike during tax season (Q1) and holiday periods (Q4)
-- **YoY growth trends**: Recent years show 15-20% increase in complaint submissions, indicating growing consumer awareness
-- **Peak complaint months**: January, March, and December consistently show highest volumes
+- **63K+ total complaints** analyzed across multiple years and financial products
+- **Seasonal patterns detected**: Complaint volumes spike during summer and holiday periods (between Q2 and Q3)
+- **Peak complaint months**: May, June, and July are consistently highest
+- **Average Response**: Generally takes an average of two weeks (**15.09 days**) for a complaint to get a response
 
 **Geographic Distribution:**
-- **Top 5 states account for 45%** of all complaints: California, Florida, Texas, New York, Georgia
-- **Per capita analysis reveals**: Smaller states like Delaware and South Dakota show disproportionately high complaint rates
-- **Regional hotspots**: Southeast and West Coast regions dominate complaint geography
-- **Urban concentration**: Metropolitan areas generate 70%+ of complaint volume
+- **Top 4 states account for 46%** of all complaints: California, Florida, Texas, New York
+- **Regional hotspots**: Southeast and West Coast regions dominate
 
 **Product Performance:**
-- **Credit reporting leads**: 35-40% of all complaints relate to credit reporting and monitoring
-- **Debt collection second**: 20-25% of complaints involve debt collection practices
-- **Mortgage concerns**: 15% of complaints tied to mortgage products and services
-- **Rising trends**: Student loan and prepaid card complaints increasing year-over-year
+- **Checking or savings account leads (Product)**: 42.2% of all complaints
+- **Credit card or prepaid card second (Product)**: 27.6% of complaints
+- **Checking account leads (Sub-Product)**: 43.4% of all complaints
+- **Credit card second (Sub-Product)**: 28.0% of complaints
 
 ---
 
@@ -297,23 +295,12 @@ Develop an interactive Power BI dashboard that transforms raw consumer complaint
 ![Complaints Analysis](/portfolio/screenshots/consumer_financial_complaints_complaints.png)
 
 **Issue Breakdown:**
-- **Top 3 issues drive 60%** of all complaints:
-  - Incorrect information on credit report (25%)
-  - Attempts to collect debt not owed (18%)
-  - Communication tactics (17%)
-- **Emerging issues**: Identity theft and fraud complaints up 30% in recent periods
-- **Sub-issue granularity**: Account status errors, excessive contact attempts, and fee disputes most common
-
-**Submission Channel Analysis:**
-- **Web submissions dominate**: 75% of complaints submitted via online portal
-- **Phone submissions**: 15% of total, typically for urgent/complex issues
-- **Mail/Fax declining**: Less than 10% and decreasing annually
-- **Referral source**: 40% of complaints come from consumer advocacy referrals
+- **Top 5 issues drive 47.9%** of all complaints: Managing an account (24.2%), Incorrect Information (7.9%), Purchase problem (7.1%), Closing account (4.7%), and Payment troubles (4.5%)
+- **Sub-issue granularity**: Deposits and withdrawals, problems using debit cards, wrong information and identity most common
 
 **Complaint Status:**
-- **In-progress complaints**: Average 12-15% of total at any given time
-- **Closed with explanation**: 65% of complaints resolved this way
-- **Closed with relief**: 18% result in monetary or non-monetary consumer relief
+- **Timely response**: 93.7% of complaints were responded to on time with an average response of 15 days
+- **Region**: 37.0% complaints (the most) over time come from the South
 - **Disputed responses**: 8% of consumers dispute company responses
 
 ---
@@ -323,28 +310,14 @@ Develop an interactive Power BI dashboard that transforms raw consumer complaint
 ![Response Analysis](/portfolio/screenshots/consumer_financial_complaints_responses.png)
 
 **Response Time Metrics:**
-- **Average response time**: 14.2 days across all companies and products
-- **Timely response rate**: 97.3% of complaints receive timely responses (within 15 days)
-- **Fastest responders**: Large national banks average 8-10 days
-- **Slowest responders**: Smaller regional institutions average 18-22 days
+- **Average response time**: 15 days across all companies and products
+- **Timely response rate**: 93.8% of complaints receive timely responses (within 15 days)
+- **Fastest responders**: Large companies with an average of 15.06 days and South Dakota with 14.92 days
+- **Slowest responders**: Medium regional institutions average 15.14 days and Kansas with 15.28 days
 
-**Channel Impact on Response Speed:**
-- **Web submissions**: Average 11.5 days response time (fastest)
-- **Phone submissions**: Average 13.8 days
-- **Mail/Fax submissions**: Average 16.9 days (slowest)
-- **Response speed correlation**: Electronic channels 30% faster than traditional methods
-
-**Company Performance by Size:**
-- **Large companies (>10% market share)**: 96% timely response rate, 10.2 days avg
-- **Mid-size companies (1-10% share)**: 97.8% timely response rate, 14.5 days avg
-- **Small companies (<1% share)**: 94.2% timely response rate, 18.7 days avg
-- **Size-performance trend**: Mid-size companies show highest timely response rates
-
-**Response Outcomes:**
-- **Explanation without relief**: 67% of responses
-- **Monetary relief provided**: 12% of complaints
-- **Non-monetary relief**: 6% (corrections, account adjustments)
-- **Company disputes consumer claims**: 15% of responses
+**Response Rate Metrics:**
+- **Channel**: Email has 100% timely response rate, followed by Fax on 99.6%
+- **Complaints status**: 1494 cases are still open, the rest are closed
 
 ---
 
@@ -353,55 +326,39 @@ Develop an interactive Power BI dashboard that transforms raw consumer complaint
 ![Company Products Analysis](/portfolio/screenshots/consumer_financial_complaints_company_products.png)
 
 **Company Complaint Concentration:**
-- **Top 10 companies receive 55%** of all complaints
-- **Market share correlation**: Large companies receive disproportionate complaint volumes relative to customer base
-- **Complaints per 1% market share**: Ranges from 50 to 500+ depending on product mix
-- **Outlier identification**: Some mid-size companies show 3x higher complaint rates than peers
-
-**Product-Company Matrix:**
-- **Credit reporting agencies**: Dominate credit report complaint category (85%+ share)
-- **Large banks**: Lead mortgage, credit card, and checking/savings complaints
-- **Debt collectors**: Specialized firms account for 90%+ of debt collection complaints
-- **Fintech companies**: Growing share of prepaid card and money transfer complaints
-
-**Company Characteristics Correlation:**
-- **Enforcement history impact**: Companies with prior enforcement actions show 25% higher complaint recurrence rates
-- **Company size tiers**: Larger institutions have better response infrastructure but higher absolute volumes
-- **Product specialization**: Single-product companies show better response metrics than diversified institutions
-- **Regional concentration**: Companies serving multiple states have more complex complaint patterns
-
-**Product Performance Deep-Dive:**
-- **Highest complaint rate**: Credit reporting (800 complaints per 1% market share)
-- **Lowest complaint rate**: Vehicle loans and leases (120 complaints per 1% market share)
-- **Most complex issues**: Mortgage products average 2.3 sub-issues per complaint
-- **Quickest resolution**: Credit card disputes average 9.5 days response time
+- **Top company with most complaints**: COMP-0342 (83 complaints)
+- **Market share correlation**: California has the most complaints with over 20% of complaints
+- **Top Responsive Company**: COMP-0735 responds quickest with 18.37 days
+- **Most used channel and product**: Most complaints are via web (72.7%) whilst the product with the most complaints is Checking and savings account (39.7%)
+- **Complaints per 1% market share**: Ranges from 1500-1700+ depending on product mix and an average market share of 9.2%
 
 ---
 
 ## 🎯 Recommendations
 
 ### For Regulators
-1. **Focus on Hotspot States**: Prioritize oversight resources in states with disproportionately high complaint volumes
-2. **Product-Specific Interventions**: Develop targeted regulations for products with consistently high complaint rates
-3. **Response Time Standards**: Establish and enforce industry-wide response time benchmarks based on data insights
-4. **Company Size Policies**: Tailor regulatory requirements based on company size and market presence correlation with complaint outcomes
+1. **Focus on Top 4 States**: Prioritize oversight in California, Florida, Texas, and New York (46% of all complaints) to maximize impact
+2. **Address Seasonal Spikes**: Allocate additional resources during Q2-Q3 peak periods (May-July) when complaint volumes surge
+3. **Target Account Management Issues**: Create specialized guidelines for "Managing an account" complaints (24.2% of all issues)
+4. **Monitor South Region**: Increase oversight in the South (37% of complaints) with focused attention on regional institutions
 
 ### For Financial Institutions
-5. **Channel Optimization**: Shift resources to support faster-responding submission channels (web vs. mail)
-6. **Proactive Issue Resolution**: Monitor emerging complaint issues early and implement preventive measures
-7. **Benchmark Performance**: Compare response metrics against industry peers of similar size
-8. **Regional Training**: Provide targeted customer service training in high-complaint regions
+5. **Optimize Web Channel**: Invest in web infrastructure (72.7% of complaints) while maintaining email's 100% timely response rate
+6. **Improve Checking/Savings Operations**: Focus on checking accounts (42.2% of complaints) with emphasis on deposits, withdrawals, and debit card issues
+7. **Target 15-Day Benchmark**: Maintain or beat the 15-day average response time, especially medium institutions (15.14 days)
+8. **Reduce Disputed Responses**: Address the 8% dispute rate through better initial resolution quality
 
 ### For Consumers
-9. **Optimal Submission Channels**: Use web-based channels for faster response times
-10. **Issue Documentation**: Clearly categorize complaints into proper product/issue types for efficient routing
-11. **Company Research**: Check company complaint rates before selecting financial services
+9. **Use Email for Fastest Response**: Email achieves 100% timely response rate, followed by Fax (99.6%)
+10. **File During Off-Peak Months**: Avoid May-July if possible for potentially faster resolution times
+11. **Research Company Performance**: Check if companies like COMP-0735 (18.37 day response) outperform average (15 days)
+12. **Expect 15-Day Response**: 93.8% of complaints receive timely responses within 15 days industry-wide
 
 ### For Dashboard Development
-12. **Predictive Analytics**: Integrate machine learning models to forecast complaint trends
-13. **Sentiment Analysis**: Add text analytics to complaint narratives for deeper insights
-14. **Real-Time Refresh**: Implement incremental refresh for near-real-time complaint tracking
-15. **Mobile App**: Develop mobile-optimized dashboard for field regulators
+13. **Seasonal Forecasting**: Build ML models to predict Q2-Q3 spikes and resource requirements
+14. **State-Level Drill-Through**: Add interactive drill-through for top 4 states (CA, FL, TX, NY) to analyze root causes
+15. **Open Case Alerts**: Implement real-time monitoring for the 1,494 still-open cases to prevent delays
+16. **Company Benchmarking Tool**: Create comparative analysis showing companies against 15-day average and 93.8% timely rate
 
 ---
 
